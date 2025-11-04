@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int main(){
-cout << "словно ";
+cout << "Замечательный, словно ";
 cout << "сто добровольных лет одиночества" << endl;
 return 0;
 }
