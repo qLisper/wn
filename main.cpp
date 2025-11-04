@@ -2,6 +2,6 @@
 using namespace std;
 int main(){
 cout << "словно ";
-cout << "сто лет одиночества" << endl;
+cout << "сто добровольных лет одиночества" << endl;
 return 0;
 }
