@@ -15,15 +15,32 @@ namespace top {
     virtual ~IDraw() = default;
   };
   struct Dot: IDraw {
+    explicit Dot(p_t dd);
     p_t begin() const override;
     p_t next(p_t prev) const override;
     p_t d;
   };
 int main(){
   using namespace top;
-  p_t a{1, 1}, b{0,1};
-  std::cout << (a == b) << "\n";
+  IDrow* shp[3] = {};
+    bool operator==(p_t a, p_t b) {
+    return a.x == b.x && a.y == b.y;
+  bool operator !=(p_t a, p_t b) {
+  try {
+    shp[0] = Dot({0, 0});
+    shp[1] = Dot({2, 3});
+  }
+  catch (...) {
+  std::cerr << "Error:\n"
+  }
+  delete shp[1];
+  delete shp[0];
+  return arr;
 }
+top::Dot::Dot(p_t dd):
+ IDraw(),
+ d(dd)
+{}
 top::p_t top::Dot::begin() const {
   return d;
 }
