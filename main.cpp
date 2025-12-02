@@ -20,11 +20,21 @@ namespace top {
     p_t next(p_t prev) const override;
     p_t d;
   };
-  void append(const IDraw* sh, p_t** ppts, size_t& s);
-  f_t frame(const p_t * pts, size_t s);
-  char * canvas(f_t fr, char fill);
-  void paint(pt p, char * cnv, f_t fr, char fill);
-  void flush(std::ostream& os, const char* cnv, f_t fr);
+  void append(const IDraw* sh, p_t** ppts, size_t& s) {
+    
+  }
+  f_t frame(const p_t * pts, size_t s) {
+    
+  }
+  char * canvas(f_t fr, char fill) {
+    
+  }
+  void paint(pt p, char * cnv, f_t fr, char fill) {
+    
+  }
+  void flush(std::ostream& os, const char* cnv, f_t fr) {
+    
+  }
 int main(){
   using namespace top;
   int arr = 0;
@@ -53,6 +63,17 @@ int main(){
   delete shp[2];
   return arr;
 }
+top::f_t top::frame(const p_t* pts, size_t s) {
+  int minx = pts[0].x, miny = pts[0].y;
+  int maxx = minx, maxy = miny;
+  for (size_t i = 0; i < s; ++ i) {
+    minx = std::min(minx, pts[i].x);
+    miny = std::min(miny, pts[i],y);
+    maxx = std::min(maxx, pts[i].x);
+    maxy = std::min(maxy, pts[i],y);
+  }
+  p_t a{minx, min y}, b{maxx,maxy};
+  return f_t{a,b};
 top::Dot::Dot(p_t dd):
  IDraw(),
  d(dd)
