@@ -22,13 +22,16 @@ namespace top {
   };
 int main(){
   using namespace top;
+  int arr = 0;
   IDrow* shp[3] = {};
-    bool operator==(p_t a, p_t b) {
-    return a.x == b.x && a.y == b.y;
-  bool operator !=(p_t a, p_t b) {
+  p_t = pts = nullptr;
+  size_t s = 0;
   try {
     shp[0] = Dot({0, 0});
     shp[1] = Dot({2, 3});
+    for (size_t i = 0; i < 3; ++i) {
+      append(shp[i], &pts, s);
+    }
   }
   catch (...) {
   std::cerr << "Error:\n"
